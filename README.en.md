@@ -14,7 +14,9 @@ Board examples for running ArduPilot on the HUB 8735 ultra development board (ve
 
 ## Examples
 
-The first example is in preparation.
+| Example | Sensors | HAL repository tag | Board test |
+|---|---|---|---|
+| [bmi160-bmp280-qmc5883l](examples/bmi160-bmp280-qmc5883l/README.en.md) | BMI160, BMP280, QMC5883L | `v0.1.0` | Pending |
 
 What each example contains, and the checks it must pass first, are in [CONTRIBUTING](CONTRIBUTING.en.md).
 
@@ -33,7 +35,7 @@ What each example contains, and the checks it must pass first, are in [CONTRIBUT
    ```
 
 5. Flash and connect a ground station: steps 6 to 8 of the HAL repository's [Getting started][start].
-6. Use your ground station's load-parameters-from-file feature to load the files you want from the example's `params/`, then reboot.
+6. Use your ground station's load-parameters-from-file feature to load the files you want from the example's `params/`, in the order of their file name numbers, then reboot.
 7. Check orientation and failsafes on the ground as described in "Flight safety".
 
 ## Flight safety

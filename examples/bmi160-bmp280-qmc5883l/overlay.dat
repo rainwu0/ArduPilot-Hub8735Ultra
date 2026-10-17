@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# HUB 8735 ultra sensor example: BMI160 on SPI bus 1, BMP280 and QMC5883L on I2C bus 1.
+# Use with: ./waf configure --board hub8735ultra --extra-hwdef <path to this file>
+# Wiring and checks: README.md / README.en.md in this directory.
+
+# IMU rotation for the example board's module placement (component side up,
+# front at the microSD end). Check yours with the gravity test in the README.
+IMU BMI160 SPI:bmi160 ROTATION_ROLL_180_YAW_270
+
+# CSB high selects I2C, SDO low selects address 0x76.
+BARO BMP280 I2C:1:0x76
+
+# GY-271 with QMC5883L, external. Probe only the compass that is fitted: probing an
+# address with nothing behind it makes the HAL reinitialize the I2C controller that
+# the barometer shares.
+COMPASS QMC5883L I2C:1:0x0D true ROTATION_NONE
+define AP_COMPASS_ENABLE_DEFAULT 1

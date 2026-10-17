@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# This sensor set: BMI160, BMP280, QMC5883L.
+# The overlay enables the compass by default.
+
+# Use compass 1 for heading. 1 is the default, but a 0 stored
+# earlier overrides it and leaves the compass unhealthy.
+COMPASS_USE 1
+
+# AHRS_ORIENTATION is not set here: it depends on your frame.
+# Calibrate the accelerometer and compass after loading.

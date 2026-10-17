@@ -14,7 +14,9 @@ English: [README.en.md](README.en.md)
 
 ## 範例
 
-第一個範例準備中。
+| 範例 | 感測器 | HAL 庫標籤 | 上板驗證 |
+|---|---|---|---|
+| [bmi160-bmp280-qmc5883l](examples/bmi160-bmp280-qmc5883l/README.md) | BMI160、BMP280、QMC5883L | `v0.1.0` | 待驗 |
 
 每個範例的內容和要先通過的檢查，見 [CONTRIBUTING](CONTRIBUTING.md)。
 
@@ -33,7 +35,7 @@ English: [README.en.md](README.en.md)
    ```
 
 5. 燒錄、連上地面站：照 HAL 庫[〈從零開始〉][start]的第 6 到 8 步。
-6. 用地面站的載入參數檔功能，載入範例 `params/` 裡你要用的檔，再重開機。
+6. 用地面站的載入參數檔功能，照檔名的編號順序載入範例 `params/` 裡你要用的檔，再重開機。
 7. 照〈飛行安全須知〉在地面確認方向和失效保護。
 
 ## 飛行安全須知

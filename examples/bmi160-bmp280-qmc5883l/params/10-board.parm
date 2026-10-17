@@ -1,0 +1,12 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# HUB 8735 ultra: failsafes for a vehicle controlled over Wi-Fi.
+# ArduPilot reads at most 99 bytes per line: keep lines short.
+
+# Land when RC override from the ground station stops.
+FS_THR_ENABLE 3
+
+# Land when the ground station link is lost (Wi-Fi links can drop).
+FS_GCS_ENABLE 5
+
+# 8 = continue landing if a failsafe starts while landing.
+FS_OPTIONS 8
