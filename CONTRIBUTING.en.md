@@ -20,10 +20,11 @@ examples/<example>/
 ├── README.md         sensor set, wiring table, build steps, parameter notes, board test summary
 ├── README.en.md      the same, in English
 ├── overlay.dat       hwdef overlay: sensors and mounting orientation
-├── params/
-│   ├── board.parm        for any board: recommended failsafe values
-│   ├── use-<case>.parm   a use case, for example indoors, no GPS, no receiver
-│   └── frame-<frame>.parm  a frame example, for example a quad X with brushless ESCs
+├── params/           load in the order of the file name numbers
+│   ├── 10-board.parm          for any board: recommended failsafe values
+│   ├── 20-use-<case>.parm     a use case, for example indoors, no GPS, no receiver
+│   ├── 30-frame-<frame>.parm  a frame example, for example a quad X with brushless ESCs
+│   └── 40-sensors.parm        settings this sensor set needs (leave out if none)
 └── wiring.svg        wiring diagram (optional)
 ```
 

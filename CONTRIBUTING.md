@@ -20,10 +20,11 @@ examples/<範例>/
 ├── README.md         感測器組合、接線表、建置說明、參數說明、上板驗證摘要
 ├── README.en.md      同上，英文版
 ├── overlay.dat       hwdef 疊加檔：感測器與安裝方向
-├── params/
-│   ├── board.parm        開發板通用：失效保護的建議值
-│   ├── use-<情境>.parm    使用情境，例如室內、沒有 GPS、沒有接收機
-│   └── frame-<機架>.parm  機架範例，例如四軸 X 型配無刷 ESC
+├── params/           照檔名的編號順序載入
+│   ├── 10-board.parm          開發板通用：失效保護的建議值
+│   ├── 20-use-<情境>.parm     使用情境，例如室內、沒有 GPS、沒有接收機
+│   ├── 30-frame-<機架>.parm   機架範例，例如四軸 X 型配無刷 ESC
+│   └── 40-sensors.parm        這組感測器要的設定（沒有就省略）
 └── wiring.svg        接線圖（可省略）
 ```
 
