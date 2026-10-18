@@ -13,19 +13,21 @@ Issues and pull requests are welcome here, in Chinese or English.
 
 ## What an example contains
 
-Each example is one directory named after its sensor set, for example `examples/bmi160-bmp280-qmc5883l/`:
+Each example is one directory named after its sensor set or its expansion board, for example `examples/bmi160-bmp280-qmc5883l/` or `examples/expansion-board-handbuilt/`:
 
 ```
 examples/<example>/
 ├── README.md         sensor set, wiring table, build steps, parameter notes, board test summary
 ├── README.en.md      the same, in English
 ├── overlay.dat       hwdef overlay: sensors and mounting orientation
+├── overlay-<variant>.dat  overlay for another wiring variant, includes overlay.dat (leave out if none)
 ├── params/           load in the order of the file name numbers
 │   ├── 10-board.parm          for any board: recommended failsafe values
 │   ├── 20-use-<case>.parm     a use case, for example indoors, no GPS, no receiver
 │   ├── 30-frame-<frame>.parm  a frame example, for example a quad X with brushless ESCs
-│   └── 40-sensors.parm        settings this sensor set needs (leave out if none)
-└── wiring.svg        wiring diagram (optional)
+│   ├── 40-sensors.parm        settings this sensor set needs (leave out if none)
+│   └── 50-<feature>.parm      other expansion board features, such as battery voltage or ESCs; number later files upward if order matters (leave out if none)
+└── wiring.svg        wiring diagram, SVG or PNG (optional, may be more than one)
 ```
 
 Sections of an example README:
@@ -35,6 +37,8 @@ Sections of an example README:
 3. **Build**: which HAL repository tag to use and the overlay command. No firmware images, because an image contains Wi-Fi credentials.
 4. **Parameters**: what each parameter file changes and why, and what to change for your own frame.
 5. **Board test**: the status of each check in the next section; for those done, what was done and what was measured, with the HAL repository tag and the date. A summary only.
+
+An expansion board example also gives the wiring of every header, and the HAL repository version each file needs.
 
 The first line of `overlay.dat` and of each file in `params/` is `# SPDX-License-Identifier: GPL-3.0-or-later`.
 

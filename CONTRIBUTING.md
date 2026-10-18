@@ -13,19 +13,21 @@ English: [CONTRIBUTING.en.md](CONTRIBUTING.en.md)
 
 ## 一個範例包含什麼
 
-每個範例一個目錄，用感測器組合命名，例如 `examples/bmi160-bmp280-qmc5883l/`：
+每個範例一個目錄，用感測器組合或擴充板命名，例如 `examples/bmi160-bmp280-qmc5883l/`、`examples/expansion-board-handbuilt/`：
 
 ```
 examples/<範例>/
 ├── README.md         感測器組合、接線表、建置說明、參數說明、上板驗證摘要
 ├── README.en.md      同上，英文版
 ├── overlay.dat       hwdef 疊加檔：感測器與安裝方向
+├── overlay-<接法>.dat  另一種接法的疊加檔，用 include 帶入 overlay.dat（沒有就省略）
 ├── params/           照檔名的編號順序載入
 │   ├── 10-board.parm          開發板通用：失效保護的建議值
 │   ├── 20-use-<情境>.parm     使用情境，例如室內、沒有 GPS、沒有接收機
 │   ├── 30-frame-<機架>.parm   機架範例，例如四軸 X 型配無刷 ESC
-│   └── 40-sensors.parm        這組感測器要的設定（沒有就省略）
-└── wiring.svg        接線圖（可省略）
+│   ├── 40-sensors.parm        這組感測器要的設定（沒有就省略）
+│   └── 50-<功能>.parm         擴充板其他功能，例如電池電壓、電調；要照順序的往後編（沒有就省略）
+└── wiring.svg        接線圖，SVG 或 PNG（可省略，可以不只一張）
 ```
 
 範例 README 的段落：
@@ -35,6 +37,8 @@ examples/<範例>/
 3. **建置**：用 HAL 庫的哪個標籤、疊加的指令。不附韌體映像，因為映像裡有 Wi-Fi 帳密。
 4. **參數**：每個參數檔改了什麼、為什麼，哪些要照自己的機架改。
 5. **上板驗證**：下一節每一項的狀態；做過的寫做了什麼、量到什麼，用的 HAL 庫標籤和日期。只寫摘要。
+
+擴充板的範例另寫每個排針的接法，以及每個檔案要搭配的 HAL 庫版本。
 
 `overlay.dat` 和 `params/` 裡的檔，開頭第一行寫 `# SPDX-License-Identifier: GPL-3.0-or-later`。
 
