@@ -57,7 +57,8 @@ An example is accepted only after every check has been done:
 ## Sending pull requests
 
 - Commit messages are in English, in the form `area: summary`, for example `examples: add wiring for bmi160-bmp280-qmc5883l`.
-- README, CONTRIBUTING and every example README come in Traditional Chinese (Taiwan) and English: when you change one version, change the other in the same commit.
+- README, CONTRIBUTING, the CHANGELOG and every example README come in Traditional Chinese (Taiwan) and English: when you change one version, change the other in the same commit.
+- When you add or change an example (its directory name, overlay, parameter files, wiring, or the HAL repository version it needs), add an entry under `[Unreleased]` in `CHANGELOG.md` and `CHANGELOG.en.md`, in the Keep a Changelog sections (Added, Changed, Fixed, Removed and so on).
 - Cite only public sources that anyone can check, with a fixed commit or version. Mark inferences as inferences.
 - Do not quote from vendor documents marked CONFIDENTIAL, even if they are publicly available: give their public path and a fixed commit, and let readers look them up.
 - Contributions are released under the matching license in the README's "License" section.

@@ -10,26 +10,26 @@ English: [README.en.md](README.en.md)
 
 - 晶片移植在 [rainwu0/ArduPilot-RTL8735B](https://github.com/rainwu0/ArduPilot-RTL8735B)（以下稱 HAL 庫），任何 RTL8735B 開發板都適用；建置、燒錄和板型 `hub8735ultra` 都在那裡。
 - 這個庫只放 HUB 8735 ultra 的範例，本身沒有 ArduPilot 的程式。用的時候先照 HAL 庫的版本標籤建置，再疊上這裡的範例。
-- 每個範例寫明驗證時用的 HAL 庫標籤，目前是 `v0.1.0`。HAL 庫升版後，範例要重新驗證開機、感測器和方向，才會改用新的標籤。
+- 每個範例寫明驗證時用的 HAL 庫標籤，目前是 `v0.1.1`。HAL 庫升版後，範例要重新驗證開機、感測器和方向，才會改用新的標籤。
 
 ## 範例
 
 | 範例 | 感測器 | HAL 庫標籤 | 上板驗證 |
 |---|---|---|---|
-| [bmi160-bmp280-qmc5883l](examples/bmi160-bmp280-qmc5883l/README.md) | BMI160、BMP280、QMC5883L | `v0.1.0` | 待驗 |
+| [bmi160-bmp280-qmc5883l](examples/bmi160-bmp280-qmc5883l/README.md) | BMI160、BMP280、QMC5883L | `v0.1.1` | 待驗 |
 
-每個範例的內容和要先通過的檢查，見 [CONTRIBUTING](CONTRIBUTING.md)。
+每個範例的內容和要先通過的檢查，見 [CONTRIBUTING](CONTRIBUTING.md)；這個庫每一版的變更，見 [CHANGELOG](CHANGELOG.md)。
 
 ## 範例怎麼用
 
-1. 照 HAL 庫的[〈從零開始〉][start]準備好環境，切到範例寫的標籤（下面以 `v0.1.0` 為例）。
+1. 照 HAL 庫的[〈從零開始〉][start]準備好環境，切到範例寫的標籤（下面以 `v0.1.1` 為例）。
 2. 把這個庫 clone 到家目錄：`git clone https://github.com/rainwu0/ArduPilot-Hub8735Ultra.git ~/ArduPilot-Hub8735Ultra`。
 3. 照範例 README 的接線表接線。
 4. 建置時疊上範例的疊加檔（`<範例>` 換成範例的目錄名稱）：
 
    ```bash
    cd ~/ArduPilot-RTL8735B
-   git checkout v0.1.0
+   git checkout v0.1.1
    ./waf configure --board hub8735ultra --extra-hwdef $HOME/ArduPilot-Hub8735Ultra/examples/<範例>/overlay.dat
    ./waf copter
    ```
@@ -64,5 +64,5 @@ English: [README.en.md](README.en.md)
 - 引用文件時請註明出處：ArduPilot-Hub8735Ultra（https://github.com/rainwu0/ArduPilot-Hub8735Ultra）。
 - 授權全文取自官方網站：GPL-3.0 取自 https://www.gnu.org/licenses/gpl-3.0.txt ，CC-BY-4.0 取自 https://creativecommons.org/licenses/by/4.0/legalcode.txt ，CERN-OHL-P-2.0 取自 CERN 公布的 https://ohwr.org/cern_ohl_p_v2.txt 。
 
-[start]: https://github.com/rainwu0/ArduPilot-RTL8735B/blob/v0.1.0/libraries/AP_HAL_RTL8735B/GETTING_STARTED.md
-[wifi]: https://github.com/rainwu0/ArduPilot-RTL8735B/blob/v0.1.0/libraries/AP_HAL_RTL8735B/README.md#wi-fi
+[start]: https://github.com/rainwu0/ArduPilot-RTL8735B/blob/v0.1.1/libraries/AP_HAL_RTL8735B/GETTING_STARTED.md
+[wifi]: https://github.com/rainwu0/ArduPilot-RTL8735B/blob/v0.1.1/libraries/AP_HAL_RTL8735B/README.md#wi-fi

@@ -57,7 +57,8 @@ examples/<範例>/
 ## 送 PR
 
 - 提交訊息用英文，寫成 `範圍: 摘要`，例如 `examples: add wiring for bmi160-bmp280-qmc5883l`。
-- README、CONTRIBUTING 和每個範例的 README 都有台灣用語的繁體中文、英文兩版：改其中一版時，另一版在同一個提交裡一起改。
+- README、CONTRIBUTING、CHANGELOG 和每個範例的 README 都有台灣用語的繁體中文、英文兩版：改其中一版時，另一版在同一個提交裡一起改。
+- 新增或改了範例（目錄名稱、疊加檔、參數檔、接線、搭配的 HAL 庫版本），在 `CHANGELOG.md` 與 `CHANGELOG.en.md` 的 `[Unreleased]` 底下加一條，分類照 Keep a Changelog（新增、變更、修正、移除等）。
 - 只引用公開、查得到的來源，並附固定的提交或版本。推論要寫明是推論。
 - 板商標示 CONFIDENTIAL 的文件，就算公開查得到，也不摘錄內容：寫出它的公開路徑和固定提交，請讀者自己查。
 - 貢獻的內容依 README〈授權〉的對應授權釋出。
