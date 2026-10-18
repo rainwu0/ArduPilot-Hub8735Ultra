@@ -23,6 +23,10 @@ The orientations match how the example board is placed: component side up, with 
 
 Header positions follow the Gerber and placement drawings the vendor published (`HUB 8735 ultra toolkit/Hardware/HUB 8735 ultra PCB Gerber File.7z` and `HUB 8735 ultra toolkit/Hardware/HUB 8735 ultra_PCB Placement_Top.pdf` in ideashatch/HUB-8735 `870a7e08de7a`): seen from the component side with the USB-C connectors at the bottom, there is one row on each side, each row has an upper and a lower group of 8 pins. The left row's upper group is JA1 and its lower group JA7; the right row's upper group is JA2 and its lower group JA8. Pin 1 of each group is the square pad at the microSD end, and the pin numbers increase towards the USB-C end. For the full header map (which D number each pin is, power and ground), see the [schematic](https://github.com/ideashatch/HUB-8735/blob/870a7e08de7a/HUB%208735%20ultra%20toolkit/Hardware/HUB%208735%20ultra%20Schematic.pdf) and the [module specification](https://github.com/ideashatch/HUB-8735/blob/870a7e08de7a/HUB%208735%20ultra%20toolkit/Hardware/HUB%208735%20ultra%20Module%20Specification_V01_20240508.pdf) the vendor published; both are marked CONFIDENTIAL, so nothing is quoted from them here.
 
+![Wiring diagram: where the three modules connect on the HUB 8735 ultra headers](wiring.en.png)
+
+Vector version: [wiring.en.svg](wiring.en.svg). The diagram and the table below show the same wiring.
+
 The table below is how the example board is wired. Wired this way, a build of HAL repository `v0.1.0` detects all three sensors (T2 in the HAL repository's [BOARD_TESTS.md](https://github.com/rainwu0/ArduPilot-RTL8735B/blob/v0.1.0/libraries/AP_HAL_RTL8735B/BOARD_TESTS.md), in Chinese).
 
 | Module | Module pin | Connect to | Header position |

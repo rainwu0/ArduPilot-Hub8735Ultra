@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: CC-BY-4.0 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="860" viewBox="0 0 1160 860" font-family="'Noto Sans TC','Microsoft JhengHei','PingFang TC','Helvetica Neue',Arial,sans-serif">
+<rect width="1160" height="860" fill="#ffffff"/>
+<text x="40" y="44" font-size="22" font-weight="bold" fill="#111">範例 bmi160-bmp280-qmc5883l 接線圖</text>
+<text x="40" y="70" font-size="14" fill="#444">HUB 8735 ultra 俯視元件面，USB-C 朝下；示意圖，不照比例</text>
+<rect x="515" y="200" width="230" height="460" rx="10" fill="#eef3ee" stroke="#556655" stroke-width="2"/>
+<text x="630" y="188" font-size="14" text-anchor="middle" fill="#111">▲ 前方：microSD 端</text>
+<rect x="590" y="206" width="80" height="20" fill="#ffffff" stroke="#888"/>
+<text x="630" y="221" font-size="11" text-anchor="middle" fill="#555">microSD</text>
+<rect x="550" y="636" width="40" height="18" fill="#ffffff" stroke="#888"/>
+<text x="570" y="649" font-size="10" text-anchor="middle" fill="#555">USB-C</text>
+<rect x="670" y="636" width="40" height="18" fill="#ffffff" stroke="#888"/>
+<text x="690" y="649" font-size="10" text-anchor="middle" fill="#555">USB-C</text>
+<text x="630" y="680" font-size="12" text-anchor="middle" fill="#556655">HUB 8735 ultra（元件面）</text>
+<rect x="534" y="244" width="12" height="12" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="540" cy="272" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="540" cy="294" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="540" cy="316" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="540" cy="338" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="540" cy="360" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="540" cy="382" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="540" cy="404" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<text x="540" y="238" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">JA1</text>
+<rect x="534" y="442" width="12" height="12" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="540" cy="470" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="540" cy="492" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="540" cy="514" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="540" cy="536" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="540" cy="558" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="540" cy="580" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="540" cy="602" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<text x="540" y="436" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">JA7</text>
+<rect x="714" y="244" width="12" height="12" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="720" cy="272" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="720" cy="294" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="720" cy="316" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="720" cy="338" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="720" cy="360" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="720" cy="382" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="720" cy="404" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<text x="720" y="238" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">JA2</text>
+<rect x="714" y="442" width="12" height="12" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="720" cy="470" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="720" cy="492" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="720" cy="514" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="720" cy="536" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="720" cy="558" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="720" cy="580" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<circle cx="720" cy="602" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<text x="720" y="436" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">JA8</text>
+<text x="552" y="298" font-size="11" fill="#111">JA1.3 · D0 SDA</text>
+<text x="552" y="320" font-size="11" fill="#111">JA1.4 · D1 SCL</text>
+<text x="708" y="254" font-size="11" text-anchor="end" fill="#111">3.3 V · JA2.1</text>
+<text x="708" y="320" font-size="11" text-anchor="end" fill="#111">GND · JA2.4</text>
+<text x="708" y="452" font-size="11" text-anchor="end" fill="#111">D18 MISO · JA8.1</text>
+<text x="708" y="474" font-size="11" text-anchor="end" fill="#111">D19 SCLK · JA8.2</text>
+<text x="708" y="496" font-size="11" text-anchor="end" fill="#111">D20 MOSI · JA8.3</text>
+<text x="708" y="518" font-size="11" text-anchor="end" fill="#111">D21 CS · JA8.4</text>
+<polyline points="720,250 800,250" fill="none" stroke="#d62728" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="802" y="240" width="51" height="20" rx="4" fill="#fff" stroke="#d62728" stroke-width="1.8"/>
+<text x="809" y="254" font-size="11.5" fill="#d62728">3.3 V</text>
+<polyline points="720,316 800,316" fill="none" stroke="#222222" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="802" y="306" width="36" height="20" rx="4" fill="#fff" stroke="#222222" stroke-width="1.8"/>
+<text x="809" y="320" font-size="11.5" fill="#222222">GND</text>
+<rect x="40" y="196" width="210" height="150" rx="6" fill="#f7f7fb" stroke="#555" stroke-width="1.8"/>
+<text x="50" y="216" font-size="13" font-weight="bold" fill="#111">GY-BMP280（氣壓計）</text>
+<circle cx="250" cy="220" r="4" fill="#555"/>
+<text x="240" y="224" font-size="12" text-anchor="end" fill="#111">VCC</text>
+<circle cx="250" cy="242" r="4" fill="#555"/>
+<text x="240" y="246" font-size="12" text-anchor="end" fill="#111">GND</text>
+<circle cx="250" cy="264" r="4" fill="#555"/>
+<text x="240" y="268" font-size="12" text-anchor="end" fill="#111">SCL</text>
+<circle cx="250" cy="286" r="4" fill="#555"/>
+<text x="240" y="290" font-size="12" text-anchor="end" fill="#111">SDA</text>
+<circle cx="250" cy="308" r="4" fill="#555"/>
+<text x="240" y="312" font-size="12" text-anchor="end" fill="#111">CSB</text>
+<circle cx="250" cy="330" r="4" fill="#555"/>
+<text x="240" y="334" font-size="12" text-anchor="end" fill="#111">SDO</text>
+<rect x="40" y="426" width="210" height="130" rx="6" fill="#f7f7fb" stroke="#555" stroke-width="1.8"/>
+<text x="50" y="446" font-size="13" font-weight="bold" fill="#111">GY-271（羅盤）</text>
+<text x="50" y="462" font-size="12" fill="#333">QMC5883L</text>
+<circle cx="250" cy="450" r="4" fill="#555"/>
+<text x="240" y="454" font-size="12" text-anchor="end" fill="#111">VCC</text>
+<circle cx="250" cy="472" r="4" fill="#555"/>
+<text x="240" y="476" font-size="12" text-anchor="end" fill="#111">GND</text>
+<circle cx="250" cy="494" r="4" fill="#555"/>
+<text x="240" y="498" font-size="12" text-anchor="end" fill="#111">SCL</text>
+<circle cx="250" cy="516" r="4" fill="#555"/>
+<text x="240" y="520" font-size="12" text-anchor="end" fill="#111">SDA</text>
+<circle cx="250" cy="538" r="4" fill="#555"/>
+<text x="240" y="542" font-size="12" text-anchor="end" fill="#111">DRDY</text>
+<polyline points="410,264 410,494" fill="none" stroke="#1f6fb4" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="440,286 440,516" fill="none" stroke="#1f6fb4" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="250,264 410,264" fill="none" stroke="#1f6fb4" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="250,286 440,286" fill="none" stroke="#1f6fb4" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="250,494 410,494" fill="none" stroke="#1f6fb4" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="250,516 440,516" fill="none" stroke="#1f6fb4" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="540,294 440,294" fill="none" stroke="#1f6fb4" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="440" cy="294" r="4" fill="#1f6fb4"/>
+<polyline points="540,316 410,316" fill="none" stroke="#1f6fb4" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="410" cy="316" r="4" fill="#1f6fb4"/>
+<circle cx="410" cy="264" r="4" fill="#1f6fb4"/>
+<circle cx="440" cy="286" r="4" fill="#1f6fb4"/>
+<circle cx="410" cy="494" r="4" fill="#1f6fb4"/>
+<circle cx="440" cy="516" r="4" fill="#1f6fb4"/>
+<polyline points="410,264 410,246" fill="none" stroke="#1f6fb4" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="410,246 404,241 416,233 404,225 416,217 410,212" fill="none" stroke="#333" stroke-width="1.8" stroke-linejoin="round"/>
+<polyline points="410,212 410,190" fill="none" stroke="#d62728" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="440,286 440,246" fill="none" stroke="#1f6fb4" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="440,246 434,241 446,233 434,225 446,217 440,212" fill="none" stroke="#333" stroke-width="1.8" stroke-linejoin="round"/>
+<polyline points="440,212 440,190" fill="none" stroke="#d62728" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="402,190 448,190" fill="none" stroke="#d62728" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="410" cy="190" r="4" fill="#d62728"/>
+<circle cx="440" cy="190" r="4" fill="#d62728"/>
+<text x="452" y="232" font-size="11" fill="#333">10 kΩ</text>
+<rect x="285" y="180" width="115" height="20" rx="4" fill="#fff" stroke="#d62728" stroke-width="1.8"/>
+<text x="292" y="194" font-size="11.5" fill="#d62728">3.3 V（JA2.1）</text>
+<polyline points="250,220 266,220" fill="none" stroke="#d62728" stroke-width="2" stroke-linejoin="round"/>
+<rect x="268" y="210" width="115" height="20" rx="4" fill="#fff" stroke="#d62728" stroke-width="1.8"/>
+<text x="275" y="224" font-size="11.5" fill="#d62728">3.3 V（JA2.1）</text>
+<polyline points="250,242 266,242" fill="none" stroke="#222222" stroke-width="2" stroke-linejoin="round"/>
+<rect x="268" y="232" width="100" height="20" rx="4" fill="#fff" stroke="#222222" stroke-width="1.8"/>
+<text x="275" y="246" font-size="11.5" fill="#222222">GND（JA2.4）</text>
+<polyline points="250,308 266,308" fill="none" stroke="#d62728" stroke-width="2" stroke-linejoin="round"/>
+<rect x="268" y="298" width="115" height="20" rx="4" fill="#fff" stroke="#d62728" stroke-width="1.8"/>
+<text x="275" y="312" font-size="11.5" fill="#d62728">3.3 V（JA2.1）</text>
+<polyline points="250,330 266,330" fill="none" stroke="#222222" stroke-width="2" stroke-linejoin="round"/>
+<rect x="268" y="320" width="100" height="20" rx="4" fill="#fff" stroke="#222222" stroke-width="1.8"/>
+<text x="275" y="334" font-size="11.5" fill="#222222">GND（JA2.4）</text>
+<polyline points="250,450 266,450" fill="none" stroke="#d62728" stroke-width="2" stroke-linejoin="round"/>
+<rect x="268" y="440" width="115" height="20" rx="4" fill="#fff" stroke="#d62728" stroke-width="1.8"/>
+<text x="275" y="454" font-size="11.5" fill="#d62728">3.3 V（JA2.1）</text>
+<polyline points="250,472 266,472" fill="none" stroke="#222222" stroke-width="2" stroke-linejoin="round"/>
+<rect x="268" y="462" width="100" height="20" rx="4" fill="#fff" stroke="#222222" stroke-width="1.8"/>
+<text x="275" y="476" font-size="11.5" fill="#222222">GND（JA2.4）</text>
+<text x="258" y="542" font-size="11" fill="#888888">（不接）</text>
+<rect x="920" y="352" width="200" height="260" rx="6" fill="#f7f7fb" stroke="#555" stroke-width="1.8"/>
+<text x="930" y="372" font-size="13" font-weight="bold" fill="#111">GY-BMI160（IMU）</text>
+<circle cx="920" cy="380" r="4" fill="#555"/>
+<text x="930" y="384" font-size="12" fill="#111">3V3</text>
+<circle cx="920" cy="402" r="4" fill="#555"/>
+<text x="930" y="406" font-size="12" fill="#111">GND</text>
+<circle cx="920" cy="448" r="4" fill="#555"/>
+<text x="930" y="452" font-size="12" fill="#111">SAO</text>
+<circle cx="920" cy="470" r="4" fill="#555"/>
+<text x="930" y="474" font-size="12" fill="#111">SCL</text>
+<circle cx="920" cy="492" r="4" fill="#555"/>
+<text x="930" y="496" font-size="12" fill="#111">SDA</text>
+<circle cx="920" cy="514" r="4" fill="#555"/>
+<text x="930" y="518" font-size="12" fill="#111">CS</text>
+<text x="930" y="572" font-size="11" fill="#888888">不接：VIN、OCS、INT1、</text>
+<text x="930" y="588" font-size="11" fill="#888888">INT2、SCX、SDX</text>
+<polyline points="920,380 902,380" fill="none" stroke="#d62728" stroke-width="2" stroke-linejoin="round"/>
+<rect x="785" y="370" width="115" height="20" rx="4" fill="#fff" stroke="#d62728" stroke-width="1.8"/>
+<text x="792" y="384" font-size="11.5" fill="#d62728">3.3 V（JA2.1）</text>
+<polyline points="920,402 902,402" fill="none" stroke="#222222" stroke-width="2" stroke-linejoin="round"/>
+<rect x="800" y="392" width="100" height="20" rx="4" fill="#fff" stroke="#222222" stroke-width="1.8"/>
+<text x="807" y="406" font-size="11.5" fill="#222222">GND（JA2.4）</text>
+<polyline points="720,448 920,448" fill="none" stroke="#e07b00" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="720,470 920,470" fill="none" stroke="#e07b00" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="720,492 920,492" fill="none" stroke="#e07b00" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="720,514 920,514" fill="none" stroke="#e07b00" stroke-width="2.5" stroke-linejoin="round"/>
+<text x="40" y="712" font-size="13" fill="#b00000">不可接：D14、D12、D13、D16、D17（原因見 README〈接線〉）。</text>
+<text x="40" y="734" font-size="12" fill="#333">D0、D1 的 10 kΩ 上拉：範例開發板有加；GY-271 多半自帶上拉，可以不加（見 README）。</text>
+<text x="40" y="760" font-size="12" font-weight="bold" fill="#111">圖例</text>
+<polyline points="90,756 120,756" fill="none" stroke="#d62728" stroke-width="3" stroke-linejoin="round"/>
+<text x="126" y="760" font-size="12" fill="#111">3.3 V</text>
+<polyline points="240,756 270,756" fill="none" stroke="#222222" stroke-width="3" stroke-linejoin="round"/>
+<text x="276" y="760" font-size="12" fill="#111">GND</text>
+<polyline points="390,756 420,756" fill="none" stroke="#1f6fb4" stroke-width="3" stroke-linejoin="round"/>
+<text x="426" y="760" font-size="12" fill="#111">I²C（匯流排 1）</text>
+<polyline points="540,756 570,756" fill="none" stroke="#e07b00" stroke-width="3" stroke-linejoin="round"/>
+<text x="576" y="760" font-size="12" fill="#111">SPI（匯流排 1）</text>
+<rect x="690" y="750" width="11" height="11" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<text x="707" y="760" font-size="12" fill="#111">第 1 腳（方形焊墊）</text>
+<circle cx="845" cy="756" r="4" fill="#333"/>
+<text x="855" y="760" font-size="12" fill="#111">相連</text>
+<text x="40" y="784" font-size="12" fill="#333">同名的電源標籤彼此相連；線交叉處沒有圓點表示不相連</text>
+<text x="40" y="808" font-size="11" fill="#555">排針位置依 ideashatch/HUB-8735 870a7e08de7a 的 Gerber 與元件位置圖。模組的腳序依廠商不同，以手上模組的絲印為準。</text>
+</svg>

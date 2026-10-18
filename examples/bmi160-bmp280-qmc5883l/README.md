@@ -23,6 +23,10 @@ English: [README.en.md](README.en.md)
 
 排針的位置依板商公開的 Gerber 與元件位置圖（ideashatch/HUB-8735 `870a7e08de7a` 的 `HUB 8735 ultra toolkit/Hardware/HUB 8735 ultra PCB Gerber File.7z`、`HUB 8735 ultra toolkit/Hardware/HUB 8735 ultra_PCB Placement_Top.pdf`）：從元件面看、USB-C 朝下，左右各一排，每排分上下兩組、每組 8 腳。左排上組是 JA1、下組是 JA7，右排上組是 JA2、下組是 JA8；每組的第 1 腳是方形焊墊，在靠 microSD 的那一端，腳號往 USB-C 端增加。完整的排針對照（每支腳是哪個 D 編號、電源與地）見板商公開的[原理圖](https://github.com/ideashatch/HUB-8735/blob/870a7e08de7a/HUB%208735%20ultra%20toolkit/Hardware/HUB%208735%20ultra%20Schematic.pdf)與[模組規格書](https://github.com/ideashatch/HUB-8735/blob/870a7e08de7a/HUB%208735%20ultra%20toolkit/Hardware/HUB%208735%20ultra%20Module%20Specification_V01_20240508.pdf)；這兩份標有 CONFIDENTIAL，這裡不摘錄內容。
 
+![接線圖：三個模組接到 HUB 8735 ultra 排針的位置](wiring.png)
+
+向量圖：[wiring.svg](wiring.svg)。圖和下表是同一份接法。
+
 下表是範例開發板的接法。照這樣接，HAL 庫 `v0.1.0` 的建置偵測得到三個感測器（HAL 庫 [BOARD_TESTS.md 的 T2](https://github.com/rainwu0/ArduPilot-RTL8735B/blob/v0.1.0/libraries/AP_HAL_RTL8735B/BOARD_TESTS.md)）。
 
 | 模組 | 模組的腳 | 接到 | 排針位置 |
