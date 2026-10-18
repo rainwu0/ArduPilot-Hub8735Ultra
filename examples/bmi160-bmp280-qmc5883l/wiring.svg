@@ -49,14 +49,43 @@
 <circle cx="720" cy="580" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
 <circle cx="720" cy="602" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
 <text x="720" y="436" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">JA8</text>
-<text x="552" y="298" font-size="11" fill="#111">JA1.3 · D0 SDA</text>
-<text x="552" y="320" font-size="11" fill="#111">JA1.4 · D1 SCL</text>
-<text x="708" y="254" font-size="11" text-anchor="end" fill="#111">3.3 V · JA2.1</text>
-<text x="708" y="320" font-size="11" text-anchor="end" fill="#111">GND · JA2.4</text>
-<text x="708" y="452" font-size="11" text-anchor="end" fill="#111">D18 MISO · JA8.1</text>
-<text x="708" y="474" font-size="11" text-anchor="end" fill="#111">D19 SCLK · JA8.2</text>
-<text x="708" y="496" font-size="11" text-anchor="end" fill="#111">D20 MOSI · JA8.3</text>
-<text x="708" y="518" font-size="11" text-anchor="end" fill="#111">D21 CS · JA8.4</text>
+<text x="552" y="254" font-size="11" font-weight="normal" fill="#777">1  5V</text>
+<text x="552" y="276" font-size="11" font-weight="normal" fill="#777">2  GND</text>
+<text x="552" y="298" font-size="11" font-weight="bold" fill="#111">3  D0 · I²C SDA</text>
+<text x="552" y="320" font-size="11" font-weight="bold" fill="#111">4  D1 · I²C SCL</text>
+<text x="552" y="342" font-size="11" font-weight="normal" fill="#777">5  D2</text>
+<text x="552" y="364" font-size="11" font-weight="normal" fill="#777">6  D3</text>
+<text x="552" y="386" font-size="11" font-weight="normal" fill="#777">7  D4</text>
+<text x="552" y="408" font-size="11" font-weight="normal" fill="#777">8  D5</text>
+<text x="552" y="452" font-size="11" font-weight="normal" fill="#777">1  D6</text>
+<text x="552" y="474" font-size="11" font-weight="normal" fill="#777">2  D7</text>
+<text x="552" y="496" font-size="11" font-weight="normal" fill="#777">3  D8</text>
+<text x="552" y="518" font-size="11" font-weight="normal" fill="#777">4  D9</text>
+<text x="552" y="540" font-size="11" font-weight="normal" fill="#777">5  D10</text>
+<text x="552" y="562" font-size="11" font-weight="normal" fill="#777">6  D11</text>
+<text x="552" y="584" font-size="11" font-weight="bold" fill="#b00000">7  D12</text>
+<path d="M533 573 L547 587 M533 587 L547 573" stroke="#b00000" stroke-width="2.2"/>
+<text x="552" y="606" font-size="11" font-weight="bold" fill="#b00000">8  D13</text>
+<path d="M533 595 L547 609 M533 609 L547 595" stroke="#b00000" stroke-width="2.2"/>
+<text x="708" y="254" font-size="11" font-weight="bold" text-anchor="end" fill="#111">3.3V  1</text>
+<text x="708" y="276" font-size="11" font-weight="bold" text-anchor="end" fill="#b00000">D14  2</text>
+<path d="M713 265 L727 279 M713 279 L727 265" stroke="#b00000" stroke-width="2.2"/>
+<text x="708" y="298" font-size="11" font-weight="normal" text-anchor="end" fill="#777">D15  3</text>
+<text x="708" y="320" font-size="11" font-weight="bold" text-anchor="end" fill="#111">GND  4</text>
+<text x="708" y="342" font-size="11" font-weight="normal" text-anchor="end" fill="#777">VCC (5V)  5</text>
+<text x="708" y="364" font-size="11" font-weight="bold" text-anchor="end" fill="#b00000">D16  6</text>
+<path d="M713 353 L727 367 M713 367 L727 353" stroke="#b00000" stroke-width="2.2"/>
+<text x="708" y="386" font-size="11" font-weight="bold" text-anchor="end" fill="#b00000">D17  7</text>
+<path d="M713 375 L727 389 M713 389 L727 375" stroke="#b00000" stroke-width="2.2"/>
+<text x="708" y="408" font-size="11" font-weight="normal" text-anchor="end" fill="#777">GND  8</text>
+<text x="708" y="452" font-size="11" font-weight="bold" text-anchor="end" fill="#111">D18 · SPI MISO  1</text>
+<text x="708" y="474" font-size="11" font-weight="bold" text-anchor="end" fill="#111">D19 · SPI SCLK  2</text>
+<text x="708" y="496" font-size="11" font-weight="bold" text-anchor="end" fill="#111">D20 · SPI MOSI  3</text>
+<text x="708" y="518" font-size="11" font-weight="bold" text-anchor="end" fill="#111">D21 · SPI CS  4</text>
+<text x="708" y="540" font-size="11" font-weight="normal" text-anchor="end" fill="#777">D22  5</text>
+<text x="708" y="562" font-size="11" font-weight="normal" text-anchor="end" fill="#777">D23  6</text>
+<text x="708" y="584" font-size="11" font-weight="normal" text-anchor="end" fill="#777">D24  7</text>
+<text x="708" y="606" font-size="11" font-weight="normal" text-anchor="end" fill="#777">SPK  8</text>
 <polyline points="720,250 800,250" fill="none" stroke="#d62728" stroke-width="2.5" stroke-linejoin="round"/>
 <rect x="802" y="240" width="51" height="20" rx="4" fill="#fff" stroke="#d62728" stroke-width="1.8"/>
 <text x="809" y="254" font-size="11.5" fill="#d62728">3.3 V</text>
@@ -161,7 +190,7 @@
 <polyline points="720,470 920,470" fill="none" stroke="#e07b00" stroke-width="2.5" stroke-linejoin="round"/>
 <polyline points="720,492 920,492" fill="none" stroke="#e07b00" stroke-width="2.5" stroke-linejoin="round"/>
 <polyline points="720,514 920,514" fill="none" stroke="#e07b00" stroke-width="2.5" stroke-linejoin="round"/>
-<text x="40" y="712" font-size="13" fill="#b00000">不可接：D14、D12、D13、D16、D17（原因見 README〈接線〉）。</text>
+<text x="40" y="712" font-size="13" fill="#b00000">不可接：D14（JA2.2）、D12（JA7.7）、D13（JA7.8）、D16（JA2.6）、D17（JA2.7），圖上標 ✕，原因見 README〈接線〉。</text>
 <text x="40" y="734" font-size="12" fill="#333">D0、D1 的 10 kΩ 上拉：範例開發板有加；GY-271 多半自帶上拉，可以不加（見 README）。</text>
 <text x="40" y="760" font-size="12" font-weight="bold" fill="#111">圖例</text>
 <polyline points="90,756 120,756" fill="none" stroke="#d62728" stroke-width="3" stroke-linejoin="round"/>
@@ -176,6 +205,9 @@
 <text x="707" y="760" font-size="12" fill="#111">第 1 腳（方形焊墊）</text>
 <circle cx="845" cy="756" r="4" fill="#333"/>
 <text x="855" y="760" font-size="12" fill="#111">相連</text>
-<text x="40" y="784" font-size="12" fill="#333">同名的電源標籤彼此相連；線交叉處沒有圓點表示不相連</text>
-<text x="40" y="808" font-size="11" fill="#555">排針位置依 ideashatch/HUB-8735 870a7e08de7a 的 Gerber 與元件位置圖。模組的腳序依廠商不同，以手上模組的絲印為準。</text>
+<path d="M920 750 L931 761 M920 761 L931 750" stroke="#b00000" stroke-width="2.2"/>
+<text x="937" y="760" font-size="12" fill="#111">不可接</text>
+<text x="40" y="784" font-size="12" fill="#333">同名的電源標籤彼此相連；線交叉處沒有圓點表示不相連；排針旁的數字是組內的腳號</text>
+<text x="40" y="808" font-size="11" fill="#555">排針位置依 ideashatch/HUB-8735 870a7e08de7a 的 Gerber 與元件位置圖，各腳用途依同一提交的原理圖與模組規格書；圖是自行繪製。</text>
+<text x="40" y="824" font-size="11" fill="#555">模組的腳序依廠商不同，以手上模組的絲印為準。</text>
 </svg>

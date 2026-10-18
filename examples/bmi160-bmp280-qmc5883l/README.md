@@ -21,7 +21,7 @@ English: [README.en.md](README.en.md)
 
 ## 接線
 
-排針的位置依板商公開的 Gerber 與元件位置圖（ideashatch/HUB-8735 `870a7e08de7a` 的 `HUB 8735 ultra toolkit/Hardware/HUB 8735 ultra PCB Gerber File.7z`、`HUB 8735 ultra toolkit/Hardware/HUB 8735 ultra_PCB Placement_Top.pdf`）：從元件面看、USB-C 朝下，左右各一排，每排分上下兩組、每組 8 腳。左排上組是 JA1、下組是 JA7，右排上組是 JA2、下組是 JA8；每組的第 1 腳是方形焊墊，在靠 microSD 的那一端，腳號往 USB-C 端增加。完整的排針對照（每支腳是哪個 D 編號、電源與地）見板商公開的[原理圖](https://github.com/ideashatch/HUB-8735/blob/870a7e08de7a/HUB%208735%20ultra%20toolkit/Hardware/HUB%208735%20ultra%20Schematic.pdf)與[模組規格書](https://github.com/ideashatch/HUB-8735/blob/870a7e08de7a/HUB%208735%20ultra%20toolkit/Hardware/HUB%208735%20ultra%20Module%20Specification_V01_20240508.pdf)；這兩份標有 CONFIDENTIAL，這裡不摘錄內容。
+排針的位置依板商公開的 Gerber 與元件位置圖（ideashatch/HUB-8735 `870a7e08de7a` 的 `HUB 8735 ultra toolkit/Hardware/HUB 8735 ultra PCB Gerber File.7z`、`HUB 8735 ultra toolkit/Hardware/HUB 8735 ultra_PCB Placement_Top.pdf`）：從元件面看、USB-C 朝下，左右各一排，每排分上下兩組、每組 8 腳。左排上組是 JA1、下組是 JA7，右排上組是 JA2、下組是 JA8；每組的第 1 腳是方形焊墊，在靠 microSD 的那一端，腳號往 USB-C 端增加。每支排針的 D 編號與用途見本庫的[排針圖](../../README.md#開發板的排針)，依板商公開的[原理圖](https://github.com/ideashatch/HUB-8735/blob/870a7e08de7a/HUB%208735%20ultra%20toolkit/Hardware/HUB%208735%20ultra%20Schematic.pdf)與[模組規格書](https://github.com/ideashatch/HUB-8735/blob/870a7e08de7a/HUB%208735%20ultra%20toolkit/Hardware/HUB%208735%20ultra%20Module%20Specification_V01_20240508.pdf)整理。
 
 ![接線圖：三個模組接到 HUB 8735 ultra 排針的位置](wiring.png)
 
@@ -53,8 +53,8 @@ English: [README.en.md](README.en.md)
 - 模組一律接 3.3 V，不要接 5 V：RTL8735B 的 I/O 是 3.3 V。GY-BMI160 從 3V3 腳供電，不經模組上的穩壓器。
 - 3.3 V 與 GND 也可以照開發板排針旁的絲印找。
 - I²C 上拉：範例開發板在 D0、D1 各加了一顆 10 kΩ 電阻到 3.3 V。GY-271 模組多半自帶上拉（這是依模組賣場規格的推論，沒有量過），所以這兩顆可以不加；之後再接其他自帶上拉的 I²C 模組時，就不要再加，否則總上拉會太強。
-- 不要接的腳：D14、D12、D13、D16、D17。D14 在重置時的電位決定是否進燒錄模式，和 3.3 V 短路後重置就會進燒錄模式（板商中文使用說明 p.17–18：同一提交的 `HUB 8735 ultra toolkit/Software/HUB 8735 ultra 開發板【Arduino 使用說明】_20240508.pdf`）；D12 是 upgrade 鍵，D13 實測上控制板上的白色補光燈，D16、D17 是 LOG UART（見 HAL 庫 README 的[〈板型〉](https://github.com/rainwu0/ArduPilot-RTL8735B/blob/v0.1.1/libraries/AP_HAL_RTL8735B/README.md#板型)）。
-- 桌上測試用 USB 供電就好。要改用電池時，經 5 V BEC 接到開發板的 5 V 輸入；腳位和容許的電壓見板商的模組規格書（同一提交的 `HUB 8735 ultra toolkit/Hardware/HUB 8735 ultra Module Specification_V01_20240508.pdf`）。**電源排針接著電時，不要再插 USB**；要用 USB，先拔掉排針的電源。
+- 不要接的腳：D14（JA2.2）、D12（JA7.7）、D13（JA7.8）、D16（JA2.6）、D17（JA2.7），接線圖上標 ✕。D14 在重置時的電位決定是否進燒錄模式，和旁邊的 3.3 V（JA2.1）短路後重置就會進燒錄模式（板商中文使用說明 p.17–18：同一提交的 `HUB 8735 ultra toolkit/Software/HUB 8735 ultra 開發板【Arduino 使用說明】_20240508.pdf`），焊接時小心不要碰在一起；D12 是 upgrade 鍵，D13 實測上控制板上的白色補光燈，D16、D17 是 LOG UART（見 HAL 庫 README 的[〈板型〉](https://github.com/rainwu0/ArduPilot-RTL8735B/blob/v0.1.1/libraries/AP_HAL_RTL8735B/README.md#板型)）。
+- 桌上測試用 USB 供電就好。要改用電池時，經 5 V BEC 接到 JA1.1（5V）與 JA1.2（GND）；板商模組規格書 p.4 列的電源電壓是 4.75–5.25 V。**電源排針接著電時，不要再插 USB**：依板商原理圖，兩個 USB-C 的 5 V 直接接到排針的 5V，中間沒有隔離；要用 USB，先拔掉排針的電源。
 - 羅盤要遠離電源線、電池與磁性零件。
 
 ## 建置
