@@ -85,7 +85,7 @@ After loading, calibrate the accelerometer and the compass in the ground station
 
 ## Board test
 
-Before this example is published, the checks below have to be done on a board, with an image built from HAL repository `v0.1.1` plus the files in this directory.
+The board checks below are done with an image built from HAL repository `v0.1.1` plus the files in this directory.
 
 | # | Check | Status |
 |---|---|---|

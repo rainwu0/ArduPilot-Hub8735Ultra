@@ -34,13 +34,13 @@ Sections of an example README:
 2. **Wiring**: which D number and header position each module pin goes to; 3.3 V and GND; how the board and the modules are placed.
 3. **Build**: which HAL repository tag to use and the overlay command. No firmware images, because an image contains Wi-Fi credentials.
 4. **Parameters**: what each parameter file changes and why, and what to change for your own frame.
-5. **Board test**: for each check in the next section, what was done and what was measured, with the HAL repository tag and the date. A summary only.
+5. **Board test**: the status of each check in the next section; for those done, what was done and what was measured, with the HAL repository tag and the date. A summary only.
 
 The first line of `overlay.dat` and of each file in `params/` is `# SPDX-License-Identifier: GPL-3.0-or-later`.
 
-## Checks an example must pass first
+## Checks of an example
 
-An example is accepted only after every check has been done:
+An example can be accepted once it is workable in principle and close to complete; it does not have to wait for every check. Under "Board test" in the example README, each check below is marked with its actual status: tested on a board, verified by host tests and SITL only, or pending; results without a public record are not given as evidence.
 
 1. **Boot and connection**: normal boot messages, Wi-Fi joined, and the ground station receives heartbeats and can read parameters.
 2. **Sensors**: the IMU, the barometer (and the compass, if connected) are detected and pass the health checks, and the acceleration reads about 1 g at rest.

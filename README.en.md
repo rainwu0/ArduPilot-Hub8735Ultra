@@ -10,7 +10,7 @@ Board examples for running ArduPilot on the HUB 8735 ultra development board (ve
 
 - The chip port lives in [rainwu0/ArduPilot-RTL8735B](https://github.com/rainwu0/ArduPilot-RTL8735B) (the HAL repository below) and works for any RTL8735B board; building, flashing and the board type `hub8735ultra` are all there.
 - This repository only holds examples for the HUB 8735 ultra and contains no ArduPilot code itself. To use one, build the HAL repository at a release tag, then add the example on top.
-- Every example states the HAL repository tag it was verified with; the current one is `v0.1.1`. When the HAL repository moves to a new version, an example switches to the new tag only after boot, sensors and orientation have been verified again.
+- Every example states the HAL repository tag it was verified with; the current one is `v0.1.1`. When an example moves to a new HAL repository tag, its board test table is marked again for that tag.
 
 ## Examples
 
@@ -18,7 +18,7 @@ Board examples for running ArduPilot on the HUB 8735 ultra development board (ve
 |---|---|---|---|
 | [bmi160-bmp280-qmc5883l](examples/bmi160-bmp280-qmc5883l/README.en.md) | BMI160, BMP280, QMC5883L | `v0.1.1` | Pending |
 
-What each example contains, and the checks it must pass first, are in [CONTRIBUTING](CONTRIBUTING.en.md); the changes in each version of this repository are in the [CHANGELOG](CHANGELOG.en.md).
+What each example contains, and its checks, are in [CONTRIBUTING](CONTRIBUTING.en.md); the changes in each version of this repository are in the [CHANGELOG](CHANGELOG.en.md).
 
 ## Board headers
 

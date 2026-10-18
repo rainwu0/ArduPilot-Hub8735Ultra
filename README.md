@@ -10,7 +10,7 @@ English: [README.en.md](README.en.md)
 
 - 晶片移植在 [rainwu0/ArduPilot-RTL8735B](https://github.com/rainwu0/ArduPilot-RTL8735B)（以下稱 HAL 庫），任何 RTL8735B 開發板都適用；建置、燒錄和板型 `hub8735ultra` 都在那裡。
 - 這個庫只放 HUB 8735 ultra 的範例，本身沒有 ArduPilot 的程式。用的時候先照 HAL 庫的版本標籤建置，再疊上這裡的範例。
-- 每個範例寫明驗證時用的 HAL 庫標籤，目前是 `v0.1.1`。HAL 庫升版後，範例要重新驗證開機、感測器和方向，才會改用新的標籤。
+- 每個範例寫明驗證時用的 HAL 庫標籤，目前是 `v0.1.1`。範例改用 HAL 庫的新標籤時，驗證表照新標籤重新標狀態。
 
 ## 範例
 
@@ -18,7 +18,7 @@ English: [README.en.md](README.en.md)
 |---|---|---|---|
 | [bmi160-bmp280-qmc5883l](examples/bmi160-bmp280-qmc5883l/README.md) | BMI160、BMP280、QMC5883L | `v0.1.1` | 待驗 |
 
-每個範例的內容和要先通過的檢查，見 [CONTRIBUTING](CONTRIBUTING.md)；這個庫每一版的變更，見 [CHANGELOG](CHANGELOG.md)。
+每個範例的內容和驗證項目，見 [CONTRIBUTING](CONTRIBUTING.md)；這個庫每一版的變更，見 [CHANGELOG](CHANGELOG.md)。
 
 ## 開發板的排針
 
