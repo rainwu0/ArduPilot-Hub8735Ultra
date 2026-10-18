@@ -20,6 +20,17 @@ English: [README.en.md](README.en.md)
 
 每個範例的內容和要先通過的檢查，見 [CONTRIBUTING](CONTRIBUTING.md)；這個庫每一版的變更，見 [CHANGELOG](CHANGELOG.md)。
 
+## 開發板的排針
+
+![HUB 8735 ultra 的 32 腳排針：每支腳的 D 編號與用途](docs/pinout.png)
+
+向量圖：[docs/pinout.svg](docs/pinout.svg)。
+
+- 用途是 HAL 庫 `v0.1.1` 板型 `hub8735ultra` 的設定。D3、D4 沒有設定，疊加檔可以改成 I²C2 或 SPI0（見 HAL 庫 README 的〈自訂板〉）。
+- 不可接的五支：D14（JA2.2）在重置時的電位決定是否進燒錄模式，和旁邊的 3.3 V（JA2.1）短路後重置就會進燒錄模式（板商[中文使用說明](https://github.com/ideashatch/HUB-8735/blob/870a7e08de7a/HUB%208735%20ultra%20toolkit/Software/HUB%208735%20ultra%20%E9%96%8B%E7%99%BC%E6%9D%BF%E3%80%90Arduino%20%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E%E3%80%91_20240508.pdf) p.17–18）；D12（JA7.7）是 upgrade 鍵；D13（JA7.8）實測上控制板上的白色補光燈；D16（JA2.6）、D17（JA2.7）是 LOG UART，燒錄與開機訊息走這兩支。
+- 5V（JA1.1）與 VCC（JA2.5）是同一個 5 V，也和兩個 USB-C 的 5 V 相通；3.3V 在 JA2.1，GND 在 JA1.2、JA2.4、JA2.8。
+- 排針位置依板商公開的 [Gerber](https://github.com/ideashatch/HUB-8735/blob/870a7e08de7a/HUB%208735%20ultra%20toolkit/Hardware/HUB%208735%20ultra%20PCB%20Gerber%20File.7z) 與[元件位置圖](https://github.com/ideashatch/HUB-8735/blob/870a7e08de7a/HUB%208735%20ultra%20toolkit/Hardware/HUB%208735%20ultra_PCB%20Placement_Top.pdf)，各腳的接法依[原理圖](https://github.com/ideashatch/HUB-8735/blob/870a7e08de7a/HUB%208735%20ultra%20toolkit/Hardware/HUB%208735%20ultra%20Schematic.pdf)與[模組規格書](https://github.com/ideashatch/HUB-8735/blob/870a7e08de7a/HUB%208735%20ultra%20toolkit/Hardware/HUB%208735%20ultra%20Module%20Specification_V01_20240508.pdf)（都是 ideashatch/HUB-8735 `870a7e08de7a`）；圖是本庫自行繪製。
+
 ## 範例怎麼用
 
 1. 照 HAL 庫的[〈從零開始〉][start]準備好環境，切到範例寫的標籤（下面以 `v0.1.1` 為例）。

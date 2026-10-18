@@ -20,6 +20,17 @@ Board examples for running ArduPilot on the HUB 8735 ultra development board (ve
 
 What each example contains, and the checks it must pass first, are in [CONTRIBUTING](CONTRIBUTING.en.md); the changes in each version of this repository are in the [CHANGELOG](CHANGELOG.en.md).
 
+## Board headers
+
+![The 32 header pins of the HUB 8735 ultra: D number and use of each pin](docs/pinout.en.png)
+
+Vector version: [docs/pinout.en.svg](docs/pinout.en.svg).
+
+- The uses are the settings of board type `hub8735ultra` in HAL repository `v0.1.1`. D3 and D4 are not assigned; an overlay can make them I²C2 or SPI0 (see Custom boards in the HAL repository README).
+- The five pins not to connect: the level of D14 (JA2.2) at reset decides whether the chip enters download mode, and shorting it to the 3.3 V next to it (JA2.1) before a reset enters download mode (pages 17–18 of the vendor's [Chinese user guide](https://github.com/ideashatch/HUB-8735/blob/870a7e08de7a/HUB%208735%20ultra%20toolkit/Software/HUB%208735%20ultra%20%E9%96%8B%E7%99%BC%E6%9D%BF%E3%80%90Arduino%20%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E%E3%80%91_20240508.pdf)); D12 (JA7.7) is the upgrade button; D13 (JA7.8) drives the white fill light on the board in our tests; D16 (JA2.6) and D17 (JA2.7) are the LOG UART, which carries flashing and boot messages.
+- 5V (JA1.1) and VCC (JA2.5) are the same 5 V, also shared with the 5 V of both USB-C connectors; 3.3V is on JA2.1, and GND on JA1.2, JA2.4 and JA2.8.
+- Header positions follow the vendor's published [Gerber](https://github.com/ideashatch/HUB-8735/blob/870a7e08de7a/HUB%208735%20ultra%20toolkit/Hardware/HUB%208735%20ultra%20PCB%20Gerber%20File.7z) and [placement drawing](https://github.com/ideashatch/HUB-8735/blob/870a7e08de7a/HUB%208735%20ultra%20toolkit/Hardware/HUB%208735%20ultra_PCB%20Placement_Top.pdf), and the pin connections the [schematic](https://github.com/ideashatch/HUB-8735/blob/870a7e08de7a/HUB%208735%20ultra%20toolkit/Hardware/HUB%208735%20ultra%20Schematic.pdf) and [module specification](https://github.com/ideashatch/HUB-8735/blob/870a7e08de7a/HUB%208735%20ultra%20toolkit/Hardware/HUB%208735%20ultra%20Module%20Specification_V01_20240508.pdf) (all in ideashatch/HUB-8735 `870a7e08de7a`); the figure is drawn for this repository.
+
 ## Using an example
 
 1. Set up your environment with the HAL repository's [Getting started][start], and switch to the tag the example names (`v0.1.1` below).

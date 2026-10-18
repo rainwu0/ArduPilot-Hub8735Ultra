@@ -9,4 +9,5 @@ All notable changes to this repository are recorded here, newest first. The form
 ### Added
 
 - The first example, `examples/bmi160-bmp280-qmc5883l/`: a GY-BMI160 on SPI bus 1, and a GY-BMP280 and GY-271 (QMC5883L) on I²C bus 1, for HAL repository `v0.1.1` and board type `hub8735ultra`. It has the hwdef overlay, four parameter files (failsafes for control over Wi-Fi only, indoors without GPS or receiver, a quad X frame with ESCs on normal PWM, the compass), and notes on wiring, building and the board test.
+- A figure of the 32 header pins of the HUB 8735 ultra (`docs/pinout.svg`, in Chinese and English): the D number and use of each pin, with the five pins not to connect marked; the example's wiring diagram marks the same five.
 - README and CONTRIBUTING (in Chinese and English) and the full texts of the three licenses.
