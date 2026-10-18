@@ -1,0 +1,18 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Use case: GPS on header J10 and an RC receiver on header J11.
+# Load exactly one 20- file.
+# Not yet tested with a real GPS or receiver: see the README.
+
+# J10 (SERIAL1) carries the GPS; MAVLink stays on Wi-Fi.
+SERIAL1_PROTOCOL 5
+
+# Detect the GPS type and baud rate automatically.
+GPS1_TYPE 1
+
+# J11 (SERIAL4) is the RC input: a CRSF/ELRS-type serial receiver.
+# SBUS needs an inverter, which this board does not have.
+SERIAL4_PROTOCOL 23
+
+# 32 = bit 5 throttle must be low to arm; bit 0 clear so the
+# receiver is used (the indoor file sets it).
+RC_OPTIONS 32

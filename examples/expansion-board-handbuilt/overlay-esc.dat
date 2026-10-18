@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# ESC current and ESC telemetry on header J5, with jumper JP3 fitted.
+# Use this file alone as the --extra-hwdef: it includes overlay.dat.
+# Build it only for a board with JP3 on; with JP3 off use overlay.dat.
+# Mixed up, the UART and the ADC both claim D9 (PA2).
+# Needs a HAL release with receive-only serial ports and analog pins on PA0-PA3:
+# HAL v0.1.1 does not have them. See the README.
+include overlay.dat
+
+# UART0 receives only: D10 = PA3 takes the ESC telemetry as SERIAL3.
+undef HAL_RTL8735B_SERIAL3_TX_PIN
+define HAL_RTL8735B_SERIAL3_TX_PIN PIN_NC
+undef DEFAULT_SERIAL3_PROTOCOL
+define DEFAULT_SERIAL3_PROTOCOL SerialProtocol_ESCTelemetry
+
+# D9 = PA2 becomes ArduPilot analog pin 9: the ESC CURR.
+RTL8735B_ADC 9 PIN_A2

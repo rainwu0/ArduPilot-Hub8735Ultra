@@ -17,6 +17,7 @@ English: [README.en.md](README.en.md)
 | 範例 | 感測器 | HAL 庫標籤 | 上板驗證 |
 |---|---|---|---|
 | [bmi160-bmp280-qmc5883l](examples/bmi160-bmp280-qmc5883l/README.md) | BMI160、BMP280、QMC5883L | `v0.1.1` | 待驗 |
+| [expansion-board-handbuilt](examples/expansion-board-handbuilt/README.md) | BMI160、BMP280、QMC5883L，手焊擴充板加電池電壓、馬達、電調、GPS、遙控、外接 I²C 的排針 | `v0.1.1`（電池電壓與電調版要之後的版本） | 待驗 |
 
 每個範例的內容和驗證項目，見 [CONTRIBUTING](CONTRIBUTING.md)；這個庫每一版的變更，見 [CHANGELOG](CHANGELOG.md)。
 

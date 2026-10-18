@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Battery voltage on header J3: 100k/20k divider into D2 (analog pin 2).
+# Needs a HAL release that reads analog pins as volts. HAL v0.1.1
+# does not: its battery monitor reports unavailable. See the README.
+
+# Divider ratio 6.0; calibrate BATT_VOLT_MULT with a meter. Max 4S.
+BATT_MONITOR 3
+BATT_VOLT_PIN 2
+BATT_VOLT_MULT 6.0

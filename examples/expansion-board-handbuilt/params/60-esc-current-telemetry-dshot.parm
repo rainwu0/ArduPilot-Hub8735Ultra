@@ -1,0 +1,22 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# ESC current, ESC telemetry and DShot300 (jumper JP3 on, overlay-esc.dat).
+# Load after 30- and 50-: it switches the four outputs from PWM to DShot.
+# Needs a HAL release with DShot output; HAL v0.1.1 does not have it.
+# Not yet tested with a real ESC: see the README.
+
+# Main battery: voltage on D2 + current on D9 (analog pin 9, ESC CURR).
+BATT_MONITOR 4
+BATT_CURR_PIN 9
+# Set BATT_AMP_PERVLT and BATT_AMP_OFFSET from your ESC's data,
+# then check both against a meter.
+
+# Second monitor: ESC serial telemetry on J5 pin 2 (SERIAL3).
+# Display and logging only; the failsafe stays on the main battery.
+BATT2_MONITOR 9
+
+# DShot300: telemetry requests need DShot.
+MOT_PWM_TYPE 5
+SERVO_BLH_AUTO 1
+SERVO_BLH_TRATE 10
+# Motor pole count; 14 is common, check your motors.
+SERVO_BLH_POLES 14

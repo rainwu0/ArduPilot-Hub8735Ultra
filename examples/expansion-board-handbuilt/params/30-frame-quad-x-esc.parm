@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Example frame: quad X, brushless ESCs on normal PWM.
+# Change FRAME_CLASS and FRAME_TYPE for your frame.
+FRAME_CLASS 1
+FRAME_TYPE 1
+
+# 0 = normal PWM. On HAL v0.1.1, OneShot125 (2) is built but not tried
+# on a board, and DShot (4-7) is not supported (60- sets DShot).
+# PWM rate 50-490 Hz; at 490 Hz the period is 2040 us,
+# so MOT_PWM_MAX must stay below 2040.
+MOT_PWM_TYPE 0
+RC_SPEED 490
+MOT_PWM_MIN 1000
+MOT_PWM_MAX 2000
+MOT_SPIN_ARM 0.10
+MOT_SPIN_MIN 0.15
+MOT_SPIN_MAX 0.95
+
+# Disarmed outputs send MOT_PWM_MIN (MOT_SAFE_DISARM 0).
+# Calibrate ESCs and test motors with propellers off.

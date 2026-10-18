@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Use case: indoors, no GPS, no RC receiver (ground station only).
+# Load exactly one 20- file.
+
+# No GPS.
+GPS1_TYPE 0
+
+# 33 = bit 0 ignore the RC receiver + bit 5 throttle must be low to arm.
+RC_OPTIONS 33

@@ -17,6 +17,7 @@ Board examples for running ArduPilot on the HUB 8735 ultra development board (ve
 | Example | Sensors | HAL repository tag | Board test |
 |---|---|---|---|
 | [bmi160-bmp280-qmc5883l](examples/bmi160-bmp280-qmc5883l/README.en.md) | BMI160, BMP280, QMC5883L | `v0.1.1` | Pending |
+| [expansion-board-handbuilt](examples/expansion-board-handbuilt/README.en.md) | BMI160, BMP280, QMC5883L, on a hand-built expansion board with headers for battery voltage, motors, ESC, GPS, RC and external I²C | `v0.1.1` (battery voltage and the ESC version need a later release) | Pending |
 
 What each example contains, and its checks, are in [CONTRIBUTING](CONTRIBUTING.en.md); the changes in each version of this repository are in the [CHANGELOG](CHANGELOG.en.md).
 
