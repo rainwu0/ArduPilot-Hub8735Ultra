@@ -6,7 +6,7 @@ Three common sensor modules connected to a HUB 8735 ultra as the flight controll
 
 **The files of this example have not yet finished the board test on a public HAL repository tag, and it has not flown.** For the status see "Board test"; before you start, read [Flight safety](../../README.en.md#flight-safety) on this repository's home page.
 
-- HAL repository tag: `v0.1.0` (commit `4e0bb22fbd`)
+- HAL repository tag: `v0.1.1`
 - Board type: `hub8735ultra`
 
 ## Sensor set
@@ -21,7 +21,7 @@ The orientations match how the example board is placed: component side up, with 
 
 ## Wiring
 
-Header positions follow the Gerber and placement drawings the vendor published (`HUB 8735 ultra toolkit/Hardware/HUB 8735 ultra PCB Gerber File.7z` and `HUB 8735 ultra toolkit/Hardware/HUB 8735 ultra_PCB Placement_Top.pdf` in ideashatch/HUB-8735 `870a7e08de7a`): seen from the component side with the USB-C connectors at the bottom, there is one row on each side, each row has an upper and a lower group of 8 pins. The left row's upper group is JA1 and its lower group JA7; the right row's upper group is JA2 and its lower group JA8. Pin 1 of each group is the square pad at the microSD end, and the pin numbers increase towards the USB-C end.
+Header positions follow the Gerber and placement drawings the vendor published (`HUB 8735 ultra toolkit/Hardware/HUB 8735 ultra PCB Gerber File.7z` and `HUB 8735 ultra toolkit/Hardware/HUB 8735 ultra_PCB Placement_Top.pdf` in ideashatch/HUB-8735 `870a7e08de7a`): seen from the component side with the USB-C connectors at the bottom, there is one row on each side, each row has an upper and a lower group of 8 pins. The left row's upper group is JA1 and its lower group JA7; the right row's upper group is JA2 and its lower group JA8. Pin 1 of each group is the square pad at the microSD end, and the pin numbers increase towards the USB-C end. For the full header map (which D number each pin is, power and ground), see the [schematic](https://github.com/ideashatch/HUB-8735/blob/870a7e08de7a/HUB%208735%20ultra%20toolkit/Hardware/HUB%208735%20ultra%20Schematic.pdf) and the [module specification](https://github.com/ideashatch/HUB-8735/blob/870a7e08de7a/HUB%208735%20ultra%20toolkit/Hardware/HUB%208735%20ultra%20Module%20Specification_V01_20240508.pdf) the vendor published; both are marked CONFIDENTIAL, so nothing is quoted from them here.
 
 The table below is how the example board is wired. Wired this way, a build of HAL repository `v0.1.0` detects all three sensors (T2 in the HAL repository's [BOARD_TESTS.md](https://github.com/rainwu0/ArduPilot-RTL8735B/blob/v0.1.0/libraries/AP_HAL_RTL8735B/BOARD_TESTS.md), in Chinese).
 
@@ -49,24 +49,24 @@ The table below is how the example board is wired. Wired this way, a build of HA
 - Connect every module to 3.3 V, never to 5 V: the RTL8735B's I/O is 3.3 V. The GY-BMI160 is powered from its 3V3 pin, bypassing the regulator on the module.
 - You can also find 3.3 V and GND from the silkscreen next to the board's header pins.
 - I²C pull-ups: the example board has a 10 kΩ resistor from each of D0 and D1 to 3.3 V. GY-271 modules usually have their own pull-ups (inferred from the module sellers' specifications, not measured), so these two can be left out; if you later add other I²C modules with their own pull-ups, do not add them, or the total pull-up gets too strong.
-- Pins not to connect: D14, D12, D13, D16, D17. The level of D14 at reset decides whether the chip enters download mode, and shorting it to 3.3 V before a reset enters download mode (pages 17–18 of the vendor's Chinese user guide, `HUB 8735 ultra toolkit/Software/HUB 8735 ultra 開發板【Arduino 使用說明】_20240508.pdf` in the same commit); D12 is the upgrade button, D13 drives the white fill light on the board in our tests, and D16 and D17 are the LOG UART (see [Board types](https://github.com/rainwu0/ArduPilot-RTL8735B/blob/v0.1.0/libraries/AP_HAL_RTL8735B/README.en.md#board-types) in the HAL repository README).
+- Pins not to connect: D14, D12, D13, D16, D17. The level of D14 at reset decides whether the chip enters download mode, and shorting it to 3.3 V before a reset enters download mode (pages 17–18 of the vendor's Chinese user guide, `HUB 8735 ultra toolkit/Software/HUB 8735 ultra 開發板【Arduino 使用說明】_20240508.pdf` in the same commit); D12 is the upgrade button, D13 drives the white fill light on the board in our tests, and D16 and D17 are the LOG UART (see [Board types](https://github.com/rainwu0/ArduPilot-RTL8735B/blob/v0.1.1/libraries/AP_HAL_RTL8735B/README.en.md#board-types) in the HAL repository README).
 - For tests on a desk, USB power is enough. To run from a battery, go through a 5 V BEC to the board's 5 V input; for the pin and the allowed voltage, see the vendor's module specification (`HUB 8735 ultra toolkit/Hardware/HUB 8735 ultra Module Specification_V01_20240508.pdf` in the same commit). **While the power header is powered, do not plug in USB**; to use USB, first remove power from the header.
 - Keep the compass away from power wires, the battery and magnetic parts.
 
 ## Build
 
-Set up the environment and the Wi-Fi settings file and flash as in the HAL repository's [Getting started](https://github.com/rainwu0/ArduPilot-RTL8735B/blob/v0.1.0/libraries/AP_HAL_RTL8735B/GETTING_STARTED.en.md), and use this example's overlay when you build:
+Set up the environment and the Wi-Fi settings file and flash as in the HAL repository's [Getting started](https://github.com/rainwu0/ArduPilot-RTL8735B/blob/v0.1.1/libraries/AP_HAL_RTL8735B/GETTING_STARTED.en.md), and use this example's overlay when you build:
 
 ```bash
 cd ~/ArduPilot-RTL8735B
-git checkout v0.1.0
+git checkout v0.1.1
 ./waf configure --board hub8735ultra --extra-hwdef $HOME/ArduPilot-Hub8735Ultra/examples/bmi160-bmp280-qmc5883l/overlay.dat
 ./waf copter
 ```
 
-- The sensor settings in the overlay are the same as `hwdef/hub8735ultra/sensors-example.dat` in HAL repository `v0.1.0`, plus an explicit default that enables the compass.
+- The sensor settings in the overlay are the same as `hwdef/hub8735ultra/sensors-example.dat` in HAL repository `v0.1.1`, plus an explicit default that enables the compass.
 - No firmware images are provided: an image contains your Wi-Fi credentials, so build your own.
-- Known issue in `v0.1.0`: the barometer occasionally fails to initialize at boot; pressing reset to reboot fixes it (the I²C row in [Feature status](https://github.com/rainwu0/ArduPilot-RTL8735B/blob/v0.1.0/libraries/AP_HAL_RTL8735B/README.en.md#feature-status) in the HAL repository README).
+- Needs HAL repository `v0.1.1` or later: `v0.1.1` clears the I²C bus at boot, which fixes the occasional barometer initialization failure at boot in `v0.1.0` (see the HAL repository [CHANGELOG](https://github.com/rainwu0/ArduPilot-RTL8735B/blob/v0.1.1/libraries/AP_HAL_RTL8735B/CHANGELOG.en.md)).
 
 ## Parameters
 
@@ -81,7 +81,7 @@ After loading, calibrate the accelerometer and the compass in the ground station
 
 ## Board test
 
-Before this example is published, the checks below have to be done on a board, with an image built from HAL repository `v0.1.0` plus the files in this directory.
+Before this example is published, the checks below have to be done on a board, with an image built from HAL repository `v0.1.1` plus the files in this directory.
 
 | # | Check | Status |
 |---|---|---|
