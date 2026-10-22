@@ -68,7 +68,7 @@ git checkout v0.1.1
 ./waf copter
 ```
 
-- 疊加檔的感測器設定和 HAL 庫 `v0.1.1` 的 `hwdef/hub8735ultra/sensors-example.dat` 相同，另外明寫羅盤預設啟用。
+- HAL 庫〈接上感測器〉用的就是這個疊加檔。HAL 庫 `v0.1.1` 以前附的 `hwdef/hub8735ultra/sensors-example.dat` 感測器設定相同（這裡另外明寫羅盤預設啟用）；`v0.2.0` 起 HAL 庫不再附，改用這裡的。
 - 不提供韌體映像：映像裡有你的 Wi-Fi 帳密，請自己建置。
 - 需要 HAL 庫 `v0.1.1` 以上：`v0.1.1` 開機時會先清 I²C 匯流排，`v0.1.0` 開機偶爾出現的氣壓計初始化失敗已修正（HAL 庫的 [CHANGELOG](https://github.com/rainwu0/ArduPilot-RTL8735B/blob/v0.1.1/libraries/AP_HAL_RTL8735B/CHANGELOG.md)）。
 

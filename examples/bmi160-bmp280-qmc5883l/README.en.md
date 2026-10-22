@@ -68,7 +68,7 @@ git checkout v0.1.1
 ./waf copter
 ```
 
-- The sensor settings in the overlay are the same as `hwdef/hub8735ultra/sensors-example.dat` in HAL repository `v0.1.1`, plus an explicit default that enables the compass.
+- This is the overlay that Connecting sensors in the HAL repository uses. `hwdef/hub8735ultra/sensors-example.dat`, which HAL repository `v0.1.1` and earlier shipped, has the same sensor settings (this one also sets an explicit default that enables the compass); from `v0.2.0` the HAL repository no longer ships it and uses this one.
 - No firmware images are provided: an image contains your Wi-Fi credentials, so build your own.
 - Needs HAL repository `v0.1.1` or later: `v0.1.1` clears the I²C bus at boot, which fixes the occasional barometer initialization failure at boot in `v0.1.0` (see the HAL repository [CHANGELOG](https://github.com/rainwu0/ArduPilot-RTL8735B/blob/v0.1.1/libraries/AP_HAL_RTL8735B/CHANGELOG.en.md)).
 
